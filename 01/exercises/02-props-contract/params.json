@@ -1,0 +1,22 @@
+{
+  "metrics": [
+    {
+      "id": "views",
+      "label": "Views",
+      "value": "2.4M",
+      "accentColor": "#5eead4"
+    },
+    {
+      "id": "likes",
+      "label": "Likes",
+      "value": "186K",
+      "accentColor": "#a78bfa"
+    },
+    {
+      "id": "shares",
+      "label": "Shares",
+      "value": "32K",
+      "accentColor": "#fb923c"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "eyebrow": "REMOTION WORLDVIEW",
+  "title": "A frame is a computed image",
+  "subtitle": "React describes what exists in this frame.",
+  "badges": [
+    "JSX",
+    "Props",
+    "Tree"
+  ]
+}
