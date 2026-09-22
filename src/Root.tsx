@@ -1,17 +1,11 @@
 import {Composition, Folder} from "remotion";
-import {CourseMap} from "./CourseMap";
-import {CompositionDemo, DeterminismDemo, FrameFunctionDemo, LayoutCoordinatesDemo, ReactCanvasDemo, TimeFpsDemo} from "./demos";
+import {FrameCounter, FrameToProperty, MinimumComposition, RandomSeekAudit} from "./Lesson00";
 
-const VIDEO = {width: 1920, height: 1080, fps: 30};
+const video = {width: 1920, height: 1080, fps: 30, durationInFrames: 150};
 
-export const RemotionRoot = () => <>
-  <Composition id="Course-Map" component={CourseMap} durationInFrames={210} {...VIDEO} />
-  <Folder name="00-05 Foundations">
-    <Composition id="00-FrameFunction" component={FrameFunctionDemo} durationInFrames={150} {...VIDEO} />
-    <Composition id="01-ReactCanvas" component={ReactCanvasDemo} durationInFrames={150} {...VIDEO} />
-    <Composition id="02-Composition" component={CompositionDemo} durationInFrames={150} {...VIDEO} />
-    <Composition id="03-TimeFps" component={TimeFpsDemo} durationInFrames={150} {...VIDEO} />
-    <Composition id="04-Determinism" component={DeterminismDemo} durationInFrames={150} {...VIDEO} />
-    <Composition id="05-LayoutCoordinates" component={LayoutCoordinatesDemo} durationInFrames={150} {...VIDEO} />
-  </Folder>
-</>;
+export const RemotionRoot = () => <Folder name="00 Remotion Worldview">
+  <Composition id="00-01-MinimumComposition" component={MinimumComposition} {...video} />
+  <Composition id="00-02-FrameCounter" component={FrameCounter} {...video} />
+  <Composition id="00-03-FrameToProperty" component={FrameToProperty} {...video} />
+  <Composition id="00-04-RandomSeekAudit" component={RandomSeekAudit} {...video} />
+</Folder>;

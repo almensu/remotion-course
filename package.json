@@ -1,23 +1,17 @@
 {
   "name": "remotion-worldview-course",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "check": "tsc --noEmit",
-    "render:map": "remotion render Course-Map out/course-map.mp4"
+    "check": "tsc --noEmit"
   },
   "dependencies": {
     "@remotion/cli": "4.0.527",
-    "@remotion/google-fonts": "4.0.527",
-    "@remotion/media": "4.0.527",
-    "@remotion/player": "4.0.527",
-    "@remotion/transitions": "4.0.527",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "remotion": "4.0.527",
-    "zod": "4.5.4"
+    "remotion": "4.0.527"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

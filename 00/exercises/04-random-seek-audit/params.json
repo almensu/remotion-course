@@ -1,0 +1,12 @@
+{
+  "fps": 30,
+  "speedPxPerSecond": 240,
+  "startXPx": 120,
+  "auditFrames": [
+    0,
+    15,
+    30,
+    60,
+    120
+  ]
+}
