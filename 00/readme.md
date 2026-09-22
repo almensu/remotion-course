@@ -283,23 +283,16 @@ const progress = frame / durationInFrames;
 
 ---
 
-## 九、四个正式练习
+## 九、配套Studio演示
 
-1. [00-01｜最小Composition：定义一件视频作品](exercises/01-minimum-composition/)
-2. [00-02｜Frame Counter：让时间轴变得可见](exercises/02-frame-counter/)
-3. [00-03｜Frame to Property：让进度条随帧变化](exercises/03-frame-to-property/)
-4. [00-04｜Random Seek Audit：验证任意跳帧](exercises/04-random-seek-audit/)
+第00轮在Remotion Studio中提供四个讲解用Composition：
 
-每道练习都保留：
+1. `00-01-MinimumComposition`：观察一件最小可渲染视频作品需要哪些规格。
+2. `00-02-FrameCounter`：直接查看frame、seconds、fps和总帧数的关系。
+3. `00-03-FrameToProperty`：观察frame怎样映射成0—1进度和可见宽度。
+4. `00-04-RandomSeekAudit`：直接拖到任意frame，观察位置是否能被独立计算。
 
-    task
-    prompt
-    harness
-    params
-    solution
-    audit
-
----
+这些Composition用于边看讲义边观察代码和画面，不设置答题、提交或评分要求。
 
 ## 十、常见误解
 
@@ -321,28 +314,15 @@ FPS是采样频率。运动速度要由每秒移动多少、持续多少秒等�
 
 ---
 
-## 十一、本轮审计
+## 十一、观察重点
 
-### Prompt audit
+阅读示例代码与拖动时间轴时，重点观察这条因果链：
 
-- 是否说明画布、FPS、总帧数与时间单位？
-- 是否说明哪些属性随frame变化？
-- 是否给出需要检查的关键帧？
+    frame变化
+    → 当前属性重新计算
+    → React返回当前帧画面
 
-### Code audit
-
-- 当前画面是否能由输入直接计算？
-- 是否存在跨帧累积、浏览器时钟或CSS animation？
-- 语义数字是否被命名？
-
-### Runtime audit
-
-- 第0帧是否正确？
-- 直接跳到中间帧是否正确？
-- 最后一帧是否达到预期终点？
-- 刷新同一帧时结果是否一致？
-
----
+同一个frame无论通过播放、拖动还是直接跳转到达，都应该显示同一个结果。
 
 ## 十二、费曼式复述
 

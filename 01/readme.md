@@ -402,23 +402,16 @@ Prompt本身就是你对画面结构是否理解的证据。
 
 ---
 
-## 十三、四个正式练习
+## 十三、配套Studio演示
 
-1. [01-01｜JSX Anatomy：把代码还原成画面树](exercises/01-jsx-anatomy/)
-2. [01-02｜Props Contract：同一规则生成不同卡片](exercises/02-props-contract/)
-3. [01-03｜Semantic Scene Tree：按画面职责拆组件](exercises/03-semantic-scene-tree/)
-4. [01-04｜Frame-aware Boundary：父层算时间，子层画结果](exercises/04-frame-aware-boundary/)
+第01轮在Remotion Studio中提供四个讲解用Composition：
 
-每道练习固定保留：
+1. `01-01-JSXAnatomy`：观察JSX父子结构怎样形成一张标题卡。
+2. `01-02-PropsContract`：观察同一个MetricCard怎样通过不同Props生成三张卡片。
+3. `01-03-SemanticSceneTree`：观察SceneBackground、TitleBlock、ProductHero和BrandFooter组成的语义树。
+4. `01-04-FrameAwareBoundary`：观察父组件计算progress、展示组件只负责绘制的责任边界。
 
-    task
-    prompt
-    harness
-    params
-    solution
-    audit
-
----
+这些Composition是课程代码资源，用于理解讲义中的结构和数据流，暂不配置测试题。
 
 ## 十四、常见误解
 
@@ -444,30 +437,15 @@ Prompt本身就是你对画面结构是否理解的证据。
 
 ---
 
-## 十五、本轮审计
+## 十五、观察重点
 
-### Prompt audit
+阅读四个示例时，重点观察：
 
-- 是否列清画面中存在的对象？
-- 是否表达父子、重复和整体关系？
-- Props是否有真实语义？
-- 时间计算的责任边界是否明确？
-
-### Code audit
-
-- 组件名能否直接画出画面树？
-- 重复对象是否来自数据和稳定key？
-- 内容、结构、样式和时间是否混在一起？
-- 是否存在只增加跳转成本的无意义组件？
-
-### Runtime audit
-
-- 替换Props是否只改变对应内容？
-- 增加列表项是否保持结构稳定？
-- 直接跳帧时，父组件传入的视觉状态是否正确？
-- 同一组件的多个实例是否互不干扰？
-
----
+- JSX父子结构是否对应真实画面关系；
+- Props改变时，组件规则是否保持稳定；
+- 重复卡片是否来自数据而非复制代码；
+- frame到progress的计算是否集中在清楚的父层；
+- 展示组件是否只负责把输入画出来。
 
 ## 十六、费曼式复述
 

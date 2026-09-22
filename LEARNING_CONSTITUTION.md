@@ -1,7 +1,7 @@
 # Remotion AI Learning Constitution
 
 > Status: Supreme learning contract  
-> Scope: every lesson, exercise, AI-generated implementation, preview and render in this repository.
+> Scope: every lesson, AI-generated implementation, preview and render in this repository. Tests and assignments are deferred until separately commissioned.
 
 ## 0. Canonical learning loop
 
@@ -13,20 +13,20 @@
     → Learner scrubs the timeline
     → Learner changes named parameters
     → Learner predicts and observes the result
-    → Frame / motion / render audit
+    → Observe frame / motion / render causality
     → Transferable understanding
 
 ## Article I — Time model before API
 
-每道题必须先回答：什么在变化、从何时开始、持续多久、由哪个参数控制、某一帧应该出现什么。不要从“调用哪个函数”开始。
+每一轮课程必须先说明：什么在变化、从何时开始、持续多久、由哪个参数控制、某一帧应该出现什么。不要从“调用哪个函数”开始。
 
 ## Article II — Video is a deterministic frame function
 
 课程默认模型是 `FrameImage = f(frame, fps, props, assets)`。相同输入必须得到相同画面。不得使用 CSS animation、CSS transition、`Date.now()`、未固定种子的 `Math.random()` 或依赖上一帧累积的隐藏状态驱动画面。
 
-## Article III — AI writes; the learner audits
+## Article III — AI writes; the learner understands
 
-AI 可以写样板代码。学习者必须检查时间含义、参数含义、边界帧、视觉结果与导出结果，并能预测改动前后的差异。
+AI 可以写样板代码。课程必须解释时间含义、参数含义、边界帧、视觉结果与导出结果，让学习者看清改动前后的因果差异。
 
 ## Article IV — Code stays visible
 
@@ -44,13 +44,13 @@ AI 可以写样板代码。学习者必须检查时间含义、参数含义、�
 
 Composition 定义可渲染作品与视频规格；Scene 表达一个叙事段落；Layer 表达同一时刻的画面叠加。实验不得混淆三者。
 
-## Article VIII — One exercise, one dominant causal idea
+## Article VIII — One lesson, one dominant causal idea
 
-练习可以复用旧知识，每次只引入一个主要未知量。不要让初学者在同一道题里同时发现 spring、字幕、音频、转场、远程渲染与 Three.js。
+课程可以复用旧知识，每轮只引入一个主要未知量。不要让初学者在同一轮里同时发现 spring、字幕、音频、转场、远程渲染与 Three.js。
 
-## Article IX — Scrubbing is an audit tool
+## Article IX — Scrubbing makes causality visible
 
-学习者必须检查起始帧、中间帧、结束前一帧和片段边界。播放顺畅不能替代逐帧检查。
+讲解代码时应展示起始帧、中间帧、结束前一帧和片段边界。播放顺畅不能替代逐帧观察。
 
 ## Article X — Separate motion meaning from visual styling
 
@@ -62,19 +62,19 @@ Composition 定义可渲染作品与视频规格；Scene 表达一个叙事段�
 
 ## Article XII — Prompt is curriculum
 
-提示词需要表达画布规格、时长、对象层级、时间区间、运动意图、可编辑参数、边界行为和审计点。提示词质量属于学习结果。
+提示词需要表达画布规格、时长、对象层级、时间区间、运动意图、可编辑参数和边界行为。
 
 ## Article XIII — Default AI coding harness
 
 AI 生成代码默认必须：使用 `useCurrentFrame()` 与 `useVideoConfig()`；把有意义的数值参数化；为 `interpolate()` 明确 clamp；用 frame 推导画面；保持组件命名清晰；不使用 CSS 时间动画；不依赖浏览器实时钟；素材经 `staticFile()` 或明确输入传入。
 
-## Article XIV — Three audits
+## Article XIV — Three explanation layers
 
-Prompt audit 检查意图、单位、区间和边界是否清楚。Code audit 检查时间是否确定、参数是否有语义、层级是否可读。Runtime audit 检查关键帧、任意跳转、不同 FPS 及渲染结果是否符合预测。
+Prompt层说明意图、单位、区间和边界。Code层说明时间是否确定、参数是否有语义、层级是否可读。Runtime层展示关键帧、任意跳转、不同FPS及渲染结果之间的关系。
 
 ## Article XV — Reflection must be causal
 
-反思问题必须解释因果，例如“为什么第 60 帧仍然稳定停在终点”，而不是仅问“学到了什么”。
+课程总结必须解释因果，例如说明“为什么第60帧仍然稳定停在终点”，避免只列API名称。
 
 ## Article XVI — Progressive disclosure
 
@@ -82,7 +82,7 @@ Prompt audit 检查意图、单位、区间和边界是否清楚。Code audit �
 
 ## Article XVII — Studio is replaceable; course assets are durable
 
-长期资产是学习目标、语义提示词、参数契约、可见代码、关键帧证据和审计规则。工具界面可以替换。
+长期资产是学习目标、语义提示词、参数契约、可见代码、关键帧证据和因果说明。工具界面可以替换。
 
 ## Article XVIII — Complexity must pay rent
 
